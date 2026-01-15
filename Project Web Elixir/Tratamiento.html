@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elixir Capilar - Tratamiento de romero</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Botón de regreso -->
+  <a href="Index.html#catalogo" class="btn-back">
+    <img src="img/flecha.png" alt="Volver a tratamientos">
+  </a>
+
+  <!-- Sección principal -->
+  <div class="descripcion">
+    <img src="img/Tratamiento Elixir Capilar.png" alt="Tratamiento capilar con romero" class="foto-ingrediente animar">
+
+    <div class="texto animar">
+      <h2>Tratamiento capilar de romero</h2>
+      <p>
+        El tratamiento de romero de <strong>Elixir Capilar</strong> está formulado para revitalizar el cuero cabelludo,
+        fortalecer la fibra capilar y aportar una sensación de frescura duradera. Su uso regular favorece la circulación,
+        estimula el crecimiento y protege contra el daño.
+      </p>
+
+      <!-- Beneficios -->
+      <ul class="beneficios">
+        <li><strong>Fortalece:</strong> refuerza la raíz y mejora la densidad capilar.</li>
+        <li><strong>Estimula:</strong> activa la circulación del cuero cabelludo para favorecer el crecimiento.</li>
+        <li><strong>Protege:</strong> antioxidantes que cuidan la fibra capilar frente al daño externo.</li>
+        <li><strong>Frescura:</strong> aporta una sensación limpia y revitalizante en cada aplicación.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Script de animaciones -->
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const foto = document.querySelector('.foto-ingrediente');
+    const texto = document.querySelector('.texto');
+    const beneficios = document.querySelectorAll('.beneficios li');
+    const pasos = document.querySelectorAll('.pasos li');
+    
+    if (foto) foto.classList.add('animate-image');
+    if (texto) texto.classList.add('animate-text');
+    
+    // Animar beneficios y pasos después de un momento
+    setTimeout(() => {
+      beneficios.forEach(item => {
+        item.classList.add('animate-benefit', 'visible');
+      });
+      pasos.forEach(item => {
+        item.classList.add('animate-benefit', 'visible');
+      });
+    }, 800);
+  });
+  </script>
+</body>
+</html>

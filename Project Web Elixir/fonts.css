@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Fatface";
+    src: url("fonts/Fatface.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "TitanOne";
+    src: url("fonts/TitanOne-Regular.ttf") format("truetype");
+}

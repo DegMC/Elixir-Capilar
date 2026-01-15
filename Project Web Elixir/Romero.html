@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elixir Capilar - Shampoo de romero</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="Index.html#catalogo" class="btn-back">
+  <img src="img/flecha.png" alt="Volver al catálogo">
+</a>
+  <div class="descripcion">
+    <img src="img/ChatGPT Image 11 ene 2026, 08_51_43 a.m..png" alt="Romero fresco" class="foto-ingrediente animar">
+    <div class="texto animar">
+      <h2>Shampoo de romero</h2>
+      <p>
+        El romero es un estimulante natural del cuero cabelludo. Favorece la circulación,
+        ayuda a fortalecer la raíz y puede contribuir a reducir la caída. Su acción antioxidante
+        protege la fibra capilar y aporta frescura en cada aplicación.
+        </p>
+    <ul class="beneficios">
+        <li><strong>Fortalece:</strong> refuerza la raíz y mejora la densidad.</li>
+        <li><strong>Estimula:</strong> activa la circulación del cuero cabelludo.</li>
+        <li><strong>Protege:</strong> antioxidantes que cuidan la fibra capilar.</li>
+        <li><strong>Frescura:</strong> sensación limpia y revitalizante.</li>
+    </ul>
+    </div>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const foto = document.querySelector('.foto-ingrediente');
+  const texto = document.querySelector('.texto');
+  const beneficios = document.querySelectorAll('.beneficios li');
+  
+  if (foto) foto.classList.add('animate-image');
+  if (texto) texto.classList.add('animate-text');
+  
+  // Animar beneficios después de un momento
+  setTimeout(() => {
+    beneficios.forEach(item => {
+      item.classList.add('animate-benefit', 'visible');
+    });
+  }, 800);
+});
+</script>
+</body>
+</html>

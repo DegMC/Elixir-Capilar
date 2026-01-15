@@ -1,0 +1,974 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+  /* Scroll suave en toda la página */
+}
+/* ===== Estilos generales ===== */
+body {
+    font-family: 'Archivo Black', sans-serif;
+    background: transparent; /* lo quitamos para que cada sección tenga su degradado */
+    min-height: 100vh;
+    }
+
+    main {
+    background: linear-gradient(to bottom, #fbc7d4, #FCF8F8);
+    /* Rosa claro → Blanco rosado */
+}
+
+/* ===== Header con barra de navegación ===== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  background: #f5afaf;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1)
+}
+
+header h1 {
+    font-size: 28px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* ===== Texto de inicio ===== */
+p.inicio {
+    color: #000;
+    text-align: center;
+    padding: 222px;
+    font-family: 'FatFace', sans-serif;
+    font-size: 70px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* ===== Navegación ===== */
+nav ul {
+    list-style: none;
+    display: flex;
+  align-items: center; /* centra verticalmente todos los li */
+  gap: 30px;           /* espacio entre elementos */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li img {
+    cursor: pointer;        /* cambia el cursor al pasar */
+    vertical-align: middle; /* alinea la imagen con el texto */
+    width: 24px;
+    height: 24px;
+}
+
+nav ul li a {
+    text-decoration: none;
+  color: #000;         /* gris oscuro */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #000;         /* negro al pasar el mouse */
+}
+
+/* ===== Secciones ===== */
+section {
+  min-height: 100vh;      /* cada sección ocupa toda la pantalla */
+  padding: 100px 20px;    /* espacio interno */
+    text-align: center;
+}
+
+/* Scroll suave en toda la página */
+html {
+	scroll-behavior: smooth;
+}
+
+/* ===== Navegación ===== */
+nav ul {
+	list-style: none;
+	display: flex;
+	align-items: center; /* centra verticalmente todos los li */
+	gap: 0px;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	margin-left: 30px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #000; /* gris oscuro */
+	font-weight: bold;
+}
+
+nav ul li a:hover {
+	color: #000000; /* negro al pasar el mouse */
+}
+
+nav ul li img {
+	cursor: pointer; /* cambia el cursor al pasar */
+	vertical-align: middle; /* alinea la imagen con el texto */
+	width: 26px;
+	height: 26px;
+}
+
+/* ===== Secciones ===== */
+section {
+	min-height: 100vh; /* cada sección ocupa toda la pantalla */
+	padding: 100px 20px; /* espacio interno */
+	text-align: center;
+}
+
+/* ===== QUIÉNES SOMOS ===== */
+#quienes-somos {
+    background: linear-gradient(to bottom, #FCF8F8, #F9DFDF);
+    /* Blanco rosado → Rosa pálido */
+    padding: 60px 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.descripcion {
+    display: flex;
+    align-items: center;       /* centra verticalmente */
+    justify-content: center;   /* centra horizontalmente */
+    gap: 10px;               /* separación exacta entre imagen y texto */
+    margin-bottom: 60px;
+}
+
+.descripcion img.foto-equipo {
+    width: 420px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.descripcion img.foto-equipo:hover {
+    transform: scale(1.08);   /* se agranda un poco */
+    filter: brightness(1.2);  /* más brillante */
+}
+
+.descripcion .texto {
+    flex: 1;
+    max-width: 420px;          /* mismo ancho que la imagen → simetría */
+    text-align: left;
+}
+
+.descripcion h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.descripcion p {
+    font-size: 22px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.problemas h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #000;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+  flex-wrap: wrap;          /* permite que bajen si no caben */
+  justify-content: center;  /* centrados */
+    gap: 25px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgb(255, 108, 169);
+}
+
+.card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* ===== CATÁLOGO ===== */
+#catalogo {
+    background: linear-gradient(to bottom, #F9DFDF, #fff5f7);
+    /* Rosa pálido → Blanco con toque rosa */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2.catalogo {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #222;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Lista de productos */
+ul.catalogo {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;          /* permite que bajen si no caben */
+  justify-content: center;  /* centrados */
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Cada producto */
+ul.catalogo li {
+  background: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul.catalogo li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* Imagen del producto */
+ul.catalogo li img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 2px solid #eee;
+  transition: filter 0.3s ease;
+}
+
+ul.catalogo li:hover img {
+  filter: brightness(1.1);
+}
+
+/* Nombre del producto */
+ul.catalogo li p {
+  margin: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 780px) {
+  ul.catalogo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul.catalogo li {
+    width: 90%; /* ocupan casi todo el ancho en móvil */
+  }
+}
+/* ===== Descripcion del shampoo de romero.página===== */
+/* ===== Flecha de regreso ===== */
+.btn-back img {
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn-back img:hover {
+  transform: translateX(-4px); /* se mueve un poquito al pasar el mouse */
+}
+
+.btn-back {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 2000;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transform: scale(1.05);
+}
+
+.btn-back img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn-back:hover img {
+  transform: translateX(-3px);
+}
+
+.descripcion {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== Imagen del producto ===== */
+.foto-ingrediente {
+  width: 360px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* ===== Texto ===== */
+.texto {
+  flex: 1;
+}
+
+.texto h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #000;
+  font-weight: 700;
+}
+
+.texto p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Lista de beneficios */
+.beneficios {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px 20px;
+}
+
+.beneficios li {
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 16px;
+  box-shadow: 0 3px 10px rgba(199, 9, 9, 0.08);
+  font-size: 16px;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.beneficios li:hover {
+  transform: translateY(-4px);
+  background: #f9dfdf; 
+  box-shadow: 0 6px 16px rgba(199, 9, 9, 0.25); 
+}
+
+.beneficios li:hover {
+  transform: translateY(-4px);
+}
+
+/* ===== Animación de entrada ===== */
+.animar {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.animar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .descripcion {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .foto-ingrediente {
+    width: 80%;
+    max-width: 420px;
+  }
+
+  .beneficios {
+    grid-template-columns: 1fr; /* una columna en móvil */
+  }
+}
+/* ===== SECCIÓN SERVICIOS ===== */
+    #servicios {
+      background: linear-gradient(to bottom, #fff5f7, #ffe8f0, #fff5f7);
+      /* Blanco rosado suave → Rosa muy claro */
+      padding: 80px 20px;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+
+    #servicios h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      color: #222;
+      font-weight: 700;
+    }
+
+    #servicios > p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 50px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .servicios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .servicio-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .servicio-card:hover {
+      transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgb(255, 108, 169);
+    }
+
+    .servicio-icono {
+      font-size: 50px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .servicio-card h3 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: #222;
+    }
+
+    .servicio-card p {
+      font-size: 16px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .servicio-precio {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #E1306C;
+    }
+
+    /* Animaciones */
+    .servicio-card.animate-service {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+    }
+
+    .servicio-card.animate-service.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .servicio-card.animate-service:nth-child(1).visible { transition-delay: 0.1s; }
+    .servicio-card.animate-service:nth-child(2).visible { transition-delay: 0.2s; }
+    .servicio-card.animate-service:nth-child(3).visible { transition-delay: 0.3s; }
+    .servicio-card.animate-service:nth-child(4).visible { transition-delay: 0.4s; }
+    .servicio-card.animate-service:nth-child(5).visible { transition-delay: 0.5s; }
+    .servicio-card.animate-service:nth-child(6).visible { transition-delay: 0.6s; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      #servicios h2 {
+        font-size: 28px;
+      }
+
+      .servicios-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+      }
+
+      .servicio-card {
+        padding: 25px;
+      }
+    }
+/* ===== CONTACTO ===== */
+#contacto {
+    background: linear-gradient(to bottom, #fff5f7, #fbc7d4);
+    /* Blanco rosado → Rosa claro (cierra el círculo) */
+    padding: 80px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20vh;
+}
+
+.contacto-contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#contacto h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #222;
+    font-weight: 700;
+}
+
+#contacto p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Redes sociales estilo botones */
+.redes-sociales {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-red {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-red img {
+  width: 28px;
+  height: 28px;
+}
+
+.btn-red:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+/* Colores personalizados por red */
+.instagram:hover { border-color: #E1306C; color: #E1306C; }
+.whatsapp:hover { border-color: #25D366; color: #25D366; }
+.facebook:hover { border-color: #1877F2; color: #1877F2; }
+.tiktok:hover { border-color: #000; color: #000; }
+
+#contacto {
+  min-height: 100vh;              /* ocupa toda la altura de la pantalla */
+    display: flex;
+    flex-direction: column;
+  justify-content: flex-start;    /* alinea arriba */
+  align-items: center;            /* centra horizontalmente */
+  padding-top: 20vh;              /* lo baja un poco desde arriba */
+}
+
+/* Quita subrayado en todos los enlaces del catálogo */
+ul.catalogo li a,
+ul.catalogo li a:link,
+ul.catalogo li a:visited,
+ul.catalogo li a:hover,
+ul.catalogo li a:active {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+/* ============================================
+    ANIMACIONES PARA ELIXIR CAPILAR
+
+   ============================================ */
+
+/* ===== ANIMACIÓN DEL HEADER (solo al cargar) ===== */
+header.animate-header {
+    animation: slideDownHeader 0.8s ease;
+}
+
+@keyframes slideDownHeader {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== ANIMACIÓN DEL LOGO ===== */
+header h1.animate-logo {
+    animation: fadeIn 0.6s ease 0.5s both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ===== ANIMACIÓN DE LA NAVEGACIÓN ===== */
+nav ul li.animate-nav {
+    animation: fadeInDown 0.5s ease both;
+}
+
+nav ul li.animate-nav:nth-child(1) { animation-delay: 0.7s; }
+nav ul li.animate-nav:nth-child(2) { animation-delay: 0.85s; }
+nav ul li.animate-nav:nth-child(3) { animation-delay: 1s; }
+nav ul li.animate-nav:nth-child(4) { animation-delay: 1.15s; }
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== ANIMACIÓN DEL TEXTO DE INICIO ===== */
+p.inicio.animate-welcome {
+    animation: zoomInText 1s ease 1.3s both;
+}
+
+@keyframes zoomInText {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===== ANIMACIONES PARA SCROLL ===== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== ANIMACIÓN DE LAS CARDS (una por una) ===== */
+.card.animate-card {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* sombra inicial */
+}
+
+.card.animate-card.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.card.animate-card:hover {
+  box-shadow: 0 8px 18px rgb(255, 108, 169); /* sombra al pasar el mouse */
+}
+
+.card.animate-card:nth-child(1).visible { transition-delay: 0.1s; }
+.card.animate-card:nth-child(2).visible { transition-delay: 0.2s; }
+.card.animate-card:nth-child(3).visible { transition-delay: 0.3s; }
+.card.animate-card:nth-child(4).visible { transition-delay: 0.4s; }
+
+/* ===== ANIMACIÓN DE PRODUCTOS DEL CATÁLOGO ===== */
+ul.catalogo li.animate-product {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+ul.catalogo li.animate-product.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+ul.catalogo li.animate-product:hover {
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+
+ul.catalogo li.animate-product:nth-child(1).visible { transition-delay: 0.1s; }
+ul.catalogo li.animate-product:nth-child(2).visible { transition-delay: 0.2s; }
+ul.catalogo li.animate-product:nth-child(3).visible { transition-delay: 0.3s; }
+
+/* ===== ANIMACIÓN DE BOTONES DE REDES SOCIALES ===== */
+.btn-red.animate-social {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08); /* sombra inicial */
+}
+
+.btn-red.animate-social.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.btn-red.animate-social:hover {
+  transform: scale(1); /* mantiene tamaño, no hace zoom extra */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* sombra animada */
+}
+
+.btn-red.animate-social:nth-child(1).visible { transition-delay: 0.1s; }
+.btn-red.animate-social:nth-child(2).visible { transition-delay: 0.2s; }
+.btn-red.animate-social:nth-child(3).visible { transition-delay: 0.3s; }
+.btn-red.animate-social:nth-child(4).visible { transition-delay: 0.4s; }
+
+/* ===== PARA LA PÁGINA DE PRODUCTO (Romero.html) ===== */
+.foto-ingrediente.animate-image {
+    animation: slideInLeft 0.8s ease both;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.texto.animate-text {
+    animation: slideInRight 0.8s ease 0.2s both;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.beneficios li.animate-benefit {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 3px 10px rgba(199, 9, 9, 0.08); /* sombra inicial */
+  background: #fff; /* fondo inicial */
+}
+
+.beneficios li.animate-benefit.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.beneficios li.animate-benefit:hover {
+  box-shadow: 0 6px 16px rgba(199, 9, 9, 0.25); /* sombra animada */
+  background: #f9dfdf; /* fondo animado */
+}
+
+.beneficios li.animate-benefit:nth-child(1).visible { transition-delay: 0.5s; }
+.beneficios li.animate-benefit:nth-child(2).visible { transition-delay: 0.6s; }
+.beneficios li.animate-benefit:nth-child(3).visible { transition-delay: 0.7s; }
+.beneficios li.animate-benefit:nth-child(4).visible { transition-delay: 0.8s; }
+
+/* ============================================
+    MENÚ HAMBURGUESA RESPONSIVE
+    Agrega este código a tu style.css
+   ============================================ */
+
+/* ===== BOTÓN HAMBURGUESA (solo visible en móvil) ===== */
+.menu-toggle {
+  display: none; /* oculto por defecto en desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #000;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Animación del ícono cuando está abierto */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ===== RESPONSIVE - MÓVIL ===== */
+@media (max-width: 768px) {
+  /* Mostrar botón hamburguesa */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Ocultar navegación por defecto en móvil */
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%; /* fuera de la pantalla */
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    background: #f5afaf;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+    transition: right 0.4s ease;
+    z-index: 999;
+    padding-top: 80px;
+  }
+
+  /* Cuando está activo */
+  nav.active {
+    right: 0;
+  }
+
+  /* Lista vertical en móvil */
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 20px;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  nav ul li:last-child {
+    border-bottom: none;
+  }
+
+  nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+  }
+
+  nav ul li img {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Overlay oscuro cuando el menú está abierto */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+    z-index: 998;
+  }
+
+  .menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Ajustar texto de inicio en móvil */
+  p.inicio {
+    font-size: 40px;
+    padding: 150px 20px;
+  }
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) and (min-width: 769px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  nav ul {
+    gap: 20px;
+  }
+
+  nav ul li {
+    margin-left: 20px;
+  }
+
+  nav ul li a {
+    font-size: 15px;
+  }
+}
+
+body:not(:has(section)) {
+    /* Si el body NO tiene secciones, es una página de producto */
+    background: linear-gradient(to right, #fbc7d4, #FCF8F8);
+    /* Rosa claro → Blanco rosado (DE LADO) */
+    min-height: 100vh;
+}
